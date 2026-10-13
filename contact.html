@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050609">
+<title>Contact Us | AI Builder</title>
+<meta name="description" content="Contact AI Builder for AI training, workshops, cybersecurity and talent deployment support.">
+<link rel="icon" type="image/png" href="./favicon.png"><link rel="apple-touch-icon" href="./favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+:root{--bg:#050609;--panel:#0b0d12;--line:#202633;--text:#f4f7ff;--muted:#a7b5d1;--cyan:#31d6ff;--blue:#6598ff;--pink:#e872ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'Figtree',sans-serif}a{color:inherit;text-decoration:none}
+
+
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:13px 21px;color:#06101b;background:linear-gradient(110deg,var(--cyan),var(--blue));font-weight:700;cursor:pointer}
+
+.page-hero{padding:78px 24px 55px;background:radial-gradient(ellipse at 75% 0%,rgba(43,115,255,.14),transparent 42%),radial-gradient(ellipse at 10% 40%,rgba(49,214,255,.08),transparent 36%)}
+.page-hero .wrap,.content .wrap{max-width:1100px;margin:0 auto}.eyebrow{font:12px 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-.055em;margin:20px 0 18px;max-width:800px}h1 span{background:linear-gradient(100deg,#fff 10%,var(--cyan) 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;line-height:1.75;color:var(--muted);max-width:700px;margin:0}.content{padding:24px 24px 86px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border:1px solid var(--line);border-radius:22px;padding:28px;background:linear-gradient(145deg,rgba(18,22,31,.96),rgba(8,10,15,.96))}
+.card h2{font-size:23px;margin:0 0 10px}.card p{color:var(--muted);line-height:1.7;margin:0 0 18px}
+.contact-row{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-top:1px solid rgba(140,160,200,.14)}.icon-box{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:rgba(49,214,255,.09);border:1px solid rgba(49,214,255,.22);color:var(--cyan);font-size:20px}
+.contact-row small{display:block;color:#8e9cb6;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:1px 0 5px}.contact-row a,.contact-row strong{font-size:16px;overflow-wrap:anywhere}.contact-row a:hover{color:var(--cyan)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:13px;color:#d9e1f0;font-weight:600}
+.field input,.field select,.field textarea{width:100%;border:1px solid #283141;border-radius:12px;background:#080b11;color:#f5f7ff;padding:13px 14px;outline:none}.field textarea{min-height:140px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--cyan)}
+.form-note{font-size:12px!important;margin:13px 0 0!important}.faq{margin-top:22px}.faq details{border-top:1px solid var(--line);padding:18px 0}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:700}.faq details p{color:var(--muted);line-height:1.7;margin:12px 0 0}
+
+.wa{background:linear-gradient(110deg,#20d879,#13b968);color:#04170d}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn-secondary{display:inline-flex;align-items:center;justify-content:center;border:1px solid #30394a;border-radius:999px;padding:13px 20px;font-weight:700;color:#edf3ff;background:#10131a}
+@media(max-width:760px){.page-hero{padding:58px 20px 36px}.content{padding:18px 20px 60px}.grid{grid-template-columns:1fr}.card{padding:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}</style></head><body>
+<header class="site-header"><div class="wrap header-bar">
+
+
+<a class="brand" href="index.html" aria-label="AI Studio home">
+  <img src="logo.png" alt="AI Studio" width="114" height="38">
+  <!-- <span class="brand-location">Madhya Pradesh</span> -->
+</a>
+
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<nav class="site-nav" id="site-nav" aria-label="Primary"><ul class="nav-list"><li class="nav-item" data-panel>
+
+<button class="nav-btn" type="button" aria-expanded="false" aria-controls="p-solution">Solution<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+
+<div class="panel" id="p-solution"><div class="panel-inner">
+
+<div class="panel-lead"><h3>Solution</h3><p>AI roles and services you can deploy into your business.</p><a class="arrow-link" href="solution.html">View all <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+</div>
+
+<div class="panel-cols" style="--cols:2"><div class="panel-col"><h4>Roles</h4><a href="solution-deployed-developer.html">Deployed Developer</a><a href="solution-deployed-architect.html">Deployed Architect</a><a href="solution-deploy-ml-ai-engineer.html">Deploy ML/AI Engineer</a><a href="solution-deployed-robotic-engineer.html">Deployed Robotic Engineer</a><a href="solution-data-engineer.html">Data Engineer</a><a href="solution-product-and-analyst.html">Product and Analyst</a></div><div class="panel-col"><h4>Business</h4><a href="solution-integrate-ai-for-business-operation.html">Integrate AI For Business Operation</a><a href="solution-corporate-building.html">Corporate Building</a></div></div></div></div></li><li class="nav-item" data-panel>
+
+
+<button class="nav-btn" type="button" aria-expanded="false" aria-controls="p-workshop">AI Workshop<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+</button>
+
+<div class="panel" id="p-workshop"><div class="panel-inner">
+<div class="panel-lead"><h3>AI Workshop</h3><p>AI programs for schools, colleges, companies and governments.</p><a class="arrow-link" href="workshop.html">View all <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="panel-cols" style="--cols:3"><div class="panel-col"><h4>Education and community</h4><a href="workshop-school-ai-program.html">School AI Program</a><a href="workshop-college-university-ai-program.html">College &amp; University AI Program</a><a href="workshop-rural-and-urban-ai-program.html">Rural and Urban AI Program</a></div><div class="panel-col"><h4>Organisations</h4><a href="workshop-corporate-ai-program.html">Corporate AI Program</a><a href="workshop-government-public-sector-ai-program.html">Government &amp; Public Sector AI Program</a></div><div class="panel-col"><h4>Delivery</h4><a href="workshop-ai-ml-and-robotic-trainer-deployment.html">AI/ML and Robotic Trainer Deployment</a><a href="workshop-ai-lab-innovation.html">AI Lab Innovation</a><a href="workshop-assessment-and-certification.html">Assessment and Certification</a></div></div></div></div></li><li class="nav-item" data-panel>
+<button class="nav-btn" type="button" aria-expanded="false" aria-controls="p-cyber">Cyber Security<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+<div class="panel" id="p-cyber"><div class="panel-inner">
+<div class="panel-lead"><h3>Cyber Security</h3><p>Awareness, prevention and response, from threats to getting help.</p><a class="arrow-link" href="cyber-security.html">View all <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="panel-cols" style="--cols:4"><div class="panel-col"><h4>Threats</h4><a href="cyber-threats.html">Cyber Threats</a><a href="cyber-know-the-threats.html">Know the Threats</a><a href="recognize-a-threat.html">Recognize a Threat</a></div><div class="panel-col"><h4>Stay safe</h4><a href="cyber-stay-safe-online.html">Stay Safe Online</a><a href="cyber-protect-your-family.html">Protect Your Family</a><a href="cyber-protect-your-business.html">Protect Your Business</a></div><div class="panel-col"><h4>Respond</h4><a href="cyber-report-a-cyber-threat.html">Report a Cyber Threat</a><a href="what-to-do-if-targeted.html">What To Do If You’re Targeted</a><a href="cyber-report-get-help.html">Report &amp; Get Help</a></div><div class="panel-col"><h4>Learn</h4><a href="cyber-awareness-resources.html">Awareness &amp; Resources</a><a href="resource.html">Resources</a><a href="compliance.html">Security and SOC2 Governance</a></div></div></div></div></li><li><a class="nav-link" href="career.html">Career</a></li><li><a class="nav-link" href="resource.html">Resource</a></li></ul>
+<a class="btn btn-primary nav-cta" href="submit-request.html">Submit Request</a></nav></div>
+
+</header>
+
+
+<main>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">CONTACT AI BUILDER</div>
+<h1>Let’s build something <span>intelligent.</span></h1>
+<p class="lead">Have a question about AI training, workshops, cybersecurity or deploying talent? Tell us what you need and our team will help you find the right next step.</p>
+<div class="actions"><a class="btn" href="mailto:support@aibuilder.co.in">Email our team ↗</a><a class="btn wa" href="https://wa.me/19049213470" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div></section>
+<section class="content"><div class="wrap grid">
+<article class="card"><h2>Contact information</h2><p>Choose whichever channel is most convenient for you.</p>
+<div class="contact-row"><div class="icon-box">✉</div><div><small>Email support</small><a href="mailto:support@aibuilder.co.in">support@aibuilder.co.in</a></div></div>
+<div class="contact-row"><div class="icon-box">◉</div><div><small>WhatsApp / International contact</small><a href="https://wa.me/19049213470" target="_blank" rel="noopener noreferrer">+1 904 921 3470 — Chat on WhatsApp</a></div></div>
+<div class="contact-row"><div class="icon-box">☎</div><div><small>Additional contact number</small><a href="tel:+919008308909">9008308909</a></div></div>
+<div class="contact-row"><div class="icon-box">◎</div><div><small>Help &amp; support</small><a href="./help.html">Visit the Help &amp; Support page ↗</a></div></div></article>
+<article class="card"><h2>Send us a message</h2><p>Complete the form; your email app will open with the message ready to send.</p>
+<form id="contact-form"><div class="form-grid">
+<div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+<div class="field full"><label for="topic">What can we help with?</label><select id="topic" name="topic" required><option value="">Select a topic</option><option>AI Training / Workshop</option><option>Talent Deployment</option><option>Cybersecurity</option><option>Corporate AI Program</option><option>Other enquiry</option></select></div>
+<div class="field full"><label for="message">Your message</label><textarea id="message" name="message" required placeholder="Tell us what you need..."></textarea></div>
+<div class="field full"><button class="btn" type="submit">Prepare email ↗</button></div></div><p class="form-note">This form opens your default email application. It does not store or send form data directly from this website.</p></form>
+</article></div></section></main>
+<script>
+const form=document.querySelector('#contact-form');
+if(form)form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const d=new FormData(form);const subject=encodeURIComponent('AI Builder enquiry — '+d.get('topic'));const body=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nTopic: '+d.get('topic')+'\n\nMessage:\n'+d.get('message'));window.location.href='mailto:support@aibuilder.co.in?subject='+subject+'&body='+body;});
+</script>
+<footer class="site-footer">
+    <div class="wrap">
+     <div class="foot-grid">
+
+<div class="foot-brand"><img src="logo.png" alt="AI Studio" width="138" height="46"><p>AI solutions, workshops and cyber awareness for businesses, institutions and communities.</p><div><div class="foot-col"><h4>Follow us</h4></div><div class="social"><a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.6v.01M12 17v-6M12 13c0-1.6 1-2 2.2-2 1.5 0 2 1 2 2.5V17"/></svg></a><a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 4.5l15 15M19.5 4.5l-15 15"/></svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-3.5H14V7.5c0-1 .5-1.7 1.8-1.7h1.8V2.8c-.5-.1-1.500-.2-2.600-.2-2.600 0-4.300 1.600-4.300 4.400V9.500H8V13h2.700v8z"/></svg></a><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></a><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg></a></div></div></div>
+<div class="foot-col"><h4>Solution</h4><ul><li><a href="solution-deployed-developer.html">Deployed Developer</a></li><li><a href="solution-deployed-architect.html">Deployed Architect</a></li><li><a href="solution-deploy-ml-ai-engineer.html">Deploy ML/AI Engineer</a></li><li><a href="solution-deployed-robotic-engineer.html">Deployed Robotic Engineer</a></li><li><a href="solution-data-engineer.html">Data Engineer</a></li><li><a href="solution-product-and-analyst.html">Product and Analyst</a></li><li><a href="solution.html">All solutions</a></li></ul></div><div class="foot-col"><h4>AI Workshop</h4><ul><li><a href="workshop-corporate-ai-program.html">Corporate AI Program</a></li><li><a href="workshop-college-university-ai-program.html">College &amp; University AI Program</a></li><li><a href="workshop-school-ai-program.html">School AI Program</a></li><li><a href="workshop-rural-and-urban-ai-program.html">Rural and Urban AI Program</a></li><li><a href="workshop-government-public-sector-ai-program.html">Government &amp; Public Sector AI Program</a></li><li><a href="workshop.html">All programs</a></li></ul></div><div class="foot-col"><h4>Cyber Security</h4><ul><li><a href="cyber-stay-safe-online.html">Stay Safe Online</a></li><li><a href="cyber-know-the-threats.html">Know the Threats</a></li><li><a href="cyber-protect-your-family.html">Protect Your Family</a></li><li><a href="cyber-protect-your-business.html">Protect Your Business</a></li><li><a href="cyber-report-get-help.html">Report &amp; Get Help</a></li><li><a href="cyber-awareness-resources.html">Awareness &amp; Resources</a></li></ul></div>
+<div>
+  <div class="foot-col">
+    <h4>Company</h4>
+    <ul>
+      <li>
+        <a href="career.html">Career</a>
+      </li>
+      <li>
+        <!-- <a href="resource.html">Resource</a> -->
+      </li><li><a href="submit-request.html">Submit Request</a></li><li><a href="cyber-security.html">Cyber Security hub</a></li></ul>
+    
+    </div>
+      <div style="height:18px">
+
+      </div>
+
+     <div class="foot-col">
+    <h4>Resources</h4>
+    <ul>
+      <li>
+        <a href="about.html">About Us</a>
+      </li>
+      <li>
+        <!-- <a href="resource.html">Resource</a> -->
+      </li>
+      <li>
+                <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help</a>
+      </li>
+      
+      <li>
+
+      </li>
+    </ul>
+    
+    </div>
+
+      <div style="height:18px">
+
+      </div>
+      <div class="foot-col"><h4>Compliance</h4><ul><li><a href="compliance.html#soc2">Security and SOC2 Governance</a></li><li><a href="compliance.html#privacy">Data Protection &amp; Privacy</a></li><li><a href="compliance.html#accessibility">Accessibility</a></li><li><a href="compliance.html#responsible-ai">Responsible AI</a></li></ul>
+      </div>
+    </div>
+</div>
+
+<div class="foot-bottom"><span>© 2026 AI Studio. All rights reserved.</span><nav aria-label="Compliance"><a href="compliance.html#soc2">SOC 2 Governance</a><a href="compliance.html#privacy">Privacy</a><a href="compliance.html#accessibility">Accessibility</a></nav></div>
+</div>
+</footer>
+<script src="site.js"></script>
+</body></html>

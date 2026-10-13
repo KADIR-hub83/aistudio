@@ -1,0 +1,1708 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+
+  <title>About Us | AI Builder</title>
+  <meta name="description" content="Discover AI Builder — empowering people through artificial intelligence, cybersecurity, technology education, and digital innovation.">
+
+  <!-- Keep your original stylesheet -->
+  <link rel="stylesheet" href="site.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- About page styles only -->
+  <style>
+    .about-page {
+      --ab-bg: #080b12;
+      --ab-card: #111827;
+      --ab-blue: #8da5ff;
+      --ab-cyan: #63e6e2;
+      --ab-white: #f6f8ff;
+      --ab-muted: #a5b0c4;
+      --ab-border: rgba(255,255,255,.09);
+      background: var(--ab-bg);
+      color: var(--ab-white);
+      font-family: "DM Sans", sans-serif;
+      overflow: hidden;
+      line-height: 1.75;
+    }
+
+    .about-page *,
+    .about-page *::before,
+    .about-page *::after {
+      box-sizing: border-box;
+    }
+
+    .about-page a {
+      text-decoration: none;
+    }
+
+    .about-page .ab-wrap {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .about-page .ab-section {
+      position: relative;
+      padding: 100px 0;
+    }
+
+    .about-page .ab-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 14px;
+      border: 1px solid rgba(108,140,255,.3);
+      border-radius: 50px;
+      background: rgba(108,140,255,.08);
+      color: #afc0ff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .about-page .ab-eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ab-cyan);
+      box-shadow: 0 0 12px var(--ab-cyan);
+    }
+
+    .about-page .ab-gradient {
+      background: linear-gradient(105deg, #fff 0%, #a7baff 47%, #63e6e2 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-page h1,
+    .about-page h2,
+    .about-page h3 {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.13;
+      letter-spacing: -1.2px;
+    }
+
+    .about-page .ab-center {
+      text-align: center;
+    }
+
+    .about-page .ab-heading {
+      max-width: 760px;
+      margin: 20px auto 17px;
+      font-size: clamp(35px, 5vw, 53px);
+      font-weight: 600;
+    }
+
+    .about-page .ab-description {
+      max-width: 700px;
+      margin-inline: auto;
+      color: var(--ab-muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* HERO */
+
+    .about-page .ab-hero {
+      position: relative;
+      padding: 110px 0 90px;
+      background:
+        radial-gradient(ellipse at 12% 8%, rgba(83,106,255,.13), transparent 40%),
+        radial-gradient(ellipse at 90% 50%, rgba(51,211,205,.07), transparent 38%),
+        #080b12;
+    }
+
+    .about-page .ab-hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about-page .ab-hero h1 {
+      margin: 29px 0 23px;
+      font-size: clamp(48px, 6.4vw, 78px);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -4px;
+    }
+
+    .about-page .ab-hero-copy {
+      max-width: 600px;
+      margin-bottom: 29px;
+      color: var(--ab-muted);
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .about-page .ab-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .about-page .ab-btn {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 21px;
+      border: 1px solid var(--ab-border);
+      border-radius: 13px;
+      color: var(--ab-white);
+      background: rgba(255,255,255,.035);
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .about-page .ab-btn:hover {
+      transform: translateY(-3px);
+      border-color: rgba(99,230,226,.45);
+    }
+
+    .about-page .ab-btn-primary {
+      border: 0;
+      color: #071017;
+      background: linear-gradient(110deg, #a7baff, #63e6e2);
+    }
+
+    .about-page .ab-hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 29px;
+      color: #b7c2d7;
+      font-size: 12px;
+    }
+
+    .about-page .ab-dot {
+      width: 8px;
+      height: 8px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--ab-cyan);
+      box-shadow: 0 0 13px var(--ab-cyan);
+    }
+
+    /* AI ORBIT VISUAL */
+
+    .about-page .ab-visual {
+      position: relative;
+      display: grid;
+      min-height: 470px;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .about-page .ab-orbit {
+      position: absolute;
+      border: 1px solid rgba(126,154,255,.15);
+      border-radius: 50%;
+      animation: abRotate 42s linear infinite;
+    }
+
+    .about-page .ab-orbit::after {
+      content: "";
+      position: absolute;
+      top: 15%;
+      left: 15%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--ab-cyan);
+      box-shadow: 0 0 20px var(--ab-cyan);
+    }
+
+    .about-page .ab-orbit-1 {
+      width: 270px;
+      height: 270px;
+    }
+
+    .about-page .ab-orbit-2 {
+      width: 365px;
+      height: 365px;
+      animation-direction: reverse;
+    }
+
+    .about-page .ab-orbit-3 {
+      width: 455px;
+      height: 455px;
+      opacity: .75;
+    }
+
+    .about-page .ab-core {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      width: 200px;
+      height: 200px;
+      place-items: center;
+      border: 1px solid rgba(142,164,255,.55);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(108,140,255,.32), transparent 53%),
+        linear-gradient(145deg, #18233b, #0b101c);
+      box-shadow: 0 0 80px rgba(108,140,255,.18), inset 0 0 35px rgba(99,230,226,.05);
+    }
+
+    .about-page .ab-core span {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 57px;
+      font-weight: 700;
+      letter-spacing: -4px;
+      background: linear-gradient(120deg, #fff, #a5b7ff, #63e6e2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-page .ab-float {
+      position: absolute;
+      z-index: 3;
+      padding: 13px 15px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      background: rgba(17,24,39,.94);
+      box-shadow: 0 15px 45px rgba(0,0,0,.22);
+      animation: abFloat 5s ease-in-out infinite;
+    }
+
+    .about-page .ab-float strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .about-page .ab-float small {
+      color: var(--ab-muted);
+      font-size: 10px;
+    }
+
+    .about-page .ab-float-icon {
+      margin-right: 7px;
+      color: var(--ab-cyan);
+    }
+
+    .about-page .ab-float-one {
+      top: 50px;
+      right: -5px;
+    }
+
+    .about-page .ab-float-two {
+      bottom: 65px;
+      left: -5px;
+      animation-delay: -2s;
+    }
+
+    .about-page .ab-float-three {
+      right: 0;
+      bottom: 20px;
+      animation-delay: -3s;
+    }
+
+    /* VALUE STRIP */
+
+    .about-page .ab-value-strip {
+      border-top: 1px solid var(--ab-border);
+      border-bottom: 1px solid var(--ab-border);
+      background: rgba(255,255,255,.018);
+    }
+
+    .about-page .ab-value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-page .ab-value {
+      padding: 26px 12px;
+      text-align: center;
+    }
+
+    .about-page .ab-value + .ab-value {
+      border-left: 1px solid var(--ab-border);
+    }
+
+    .about-page .ab-value strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 17px;
+    }
+
+    .about-page .ab-value span {
+      color: var(--ab-muted);
+      font-size: 12px;
+    }
+
+    /* ABOUT CONTENT */
+
+    .about-page .ab-about-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-page .ab-about-intro h2 {
+      margin: 23px 0;
+      font-size: clamp(37px, 4.5vw, 54px);
+    }
+
+    .about-page .ab-about-intro p,
+    .about-page .ab-about-copy p {
+      color: var(--ab-muted);
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .about-page .ab-about-intro p {
+      margin-bottom: 25px;
+    }
+
+    .about-page .ab-about-copy p {
+      margin-bottom: 20px;
+    }
+
+    .about-page .ab-about-copy strong {
+      color: var(--ab-white);
+    }
+
+    .about-page .ab-mission {
+      position: relative;
+      overflow: hidden;
+      margin-top: 28px;
+      padding: 25px;
+      border: 1px solid rgba(108,140,255,.24);
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(108,140,255,.12), rgba(99,230,226,.035));
+    }
+
+    .about-page .ab-mission h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .about-page .ab-mission p {
+      margin-bottom: 0;
+      font-size: 13px;
+    }
+
+    /* WHY CHOOSE US */
+
+    .about-page .ab-features-section {
+      background: linear-gradient(180deg, transparent, rgba(20,29,47,.45), transparent);
+    }
+
+    .about-page .ab-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+    }
+
+    .about-page .ab-feature {
+      position: relative;
+      min-height: 235px;
+      overflow: hidden;
+      padding: 26px;
+      border: 1px solid var(--ab-border);
+      border-radius: 21px;
+      background: linear-gradient(145deg, rgba(21,30,44,.94), rgba(12,17,27,.96));
+      transition: transform .3s ease, border-color .3s ease;
+    }
+
+    .about-page .ab-feature:hover {
+      transform: translateY(-6px);
+      border-color: rgba(108,140,255,.5);
+    }
+
+    .about-page .ab-feature-number {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: rgba(255,255,255,.09);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 37px;
+      font-weight: 700;
+    }
+
+    .about-page .ab-feature-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      margin-bottom: 24px;
+      border: 1px solid rgba(108,140,255,.23);
+      border-radius: 14px;
+      background: rgba(108,140,255,.1);
+      color: var(--ab-cyan);
+      font-size: 22px;
+    }
+
+    .about-page .ab-feature h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      letter-spacing: -.4px;
+    }
+
+    .about-page .ab-feature p {
+      color: var(--ab-muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* COMMUNITY */
+
+    .about-page .ab-audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 43px;
+    }
+
+    .about-page .ab-audience {
+      display: flex;
+      min-height: 150px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 21px 18px;
+      border: 1px solid var(--ab-border);
+      border-radius: 17px;
+      background: rgba(255,255,255,.025);
+      transition: background .3s ease, transform .3s ease;
+    }
+
+    .about-page .ab-audience:hover {
+      transform: translateY(-4px);
+      background: rgba(108,140,255,.08);
+    }
+
+    .about-page .ab-audience-icon {
+      color: var(--ab-cyan);
+      font-size: 25px;
+    }
+
+    .about-page .ab-audience h3 {
+      margin-top: 20px;
+      font-size: 14px;
+      letter-spacing: -.2px;
+    }
+
+    .about-page .ab-audience-note {
+      max-width: 740px;
+      margin: 28px auto 0;
+      color: var(--ab-muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* COMMITMENT */
+
+    .about-page .ab-commitment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .about-page .ab-commitment-copy h2 {
+      margin: 22px 0;
+      font-size: clamp(36px, 4.5vw, 51px);
+    }
+
+    .about-page .ab-commitment-copy > p {
+      margin-bottom: 20px;
+      color: var(--ab-muted);
+      font-size: 14px;
+    }
+
+    .about-page .ab-check-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .about-page .ab-check-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #d9e0ef;
+      font-size: 13px;
+    }
+
+    .about-page .ab-check {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      flex-shrink: 0;
+      place-items: center;
+      border: 1px solid rgba(99,230,226,.25);
+      border-radius: 50%;
+      background: rgba(99,230,226,.09);
+      color: var(--ab-cyan);
+      font-size: 12px;
+    }
+
+    .about-page .ab-commitment-visual {
+      position: relative;
+      display: flex;
+      min-height: 365px;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      padding: 30px;
+      border: 1px solid rgba(108,140,255,.22);
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 70% 20%, rgba(99,230,226,.17), transparent 35%),
+        radial-gradient(circle at 20% 30%, rgba(108,140,255,.2), transparent 45%),
+        linear-gradient(145deg, #121c2d, #0b101a);
+    }
+
+    .about-page .ab-commitment-visual::before,
+    .about-page .ab-commitment-visual::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(142,164,255,.2);
+      border-radius: 50%;
+    }
+
+    .about-page .ab-commitment-visual::before {
+      top: -55px;
+      right: -50px;
+      width: 280px;
+      height: 280px;
+    }
+
+    .about-page .ab-commitment-visual::after {
+      top: -10px;
+      right: -5px;
+      width: 190px;
+      height: 190px;
+    }
+
+    .about-page .ab-commitment-symbol {
+      position: absolute;
+      top: 62px;
+      left: 50%;
+      color: #9db2ff;
+      font-size: 95px;
+      transform: translateX(-50%);
+      text-shadow: 0 0 55px rgba(108,140,255,.45);
+    }
+
+    .about-page .ab-commitment-visual h3 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    .about-page .ab-commitment-visual p {
+      position: relative;
+      z-index: 1;
+      color: var(--ab-muted);
+      font-size: 13px;
+    }
+
+    /* FINAL CTA */
+
+    .about-page .ab-cta-section {
+      padding-top: 40px;
+      padding-bottom: 100px;
+    }
+
+    .about-page .ab-cta-card {
+      position: relative;
+      overflow: hidden;
+      padding: 70px 32px;
+      border: 1px solid rgba(135,157,255,.26);
+      border-radius: 28px;
+      background:
+        radial-gradient(ellipse at 0% 0%, rgba(108,140,255,.21), transparent 45%),
+        radial-gradient(ellipse at 100% 100%, rgba(99,230,226,.13), transparent 45%),
+        #101622;
+    }
+
+    .about-page .ab-cta-card h2 {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: clamp(35px, 5.3vw, 58px);
+    }
+
+    .about-page .ab-cta-card > p {
+      max-width: 680px;
+      margin: 0 auto 27px;
+      color: var(--ab-muted);
+      font-size: 14px;
+    }
+
+    .about-page .ab-cta-card .ab-actions {
+      justify-content: center;
+    }
+
+    .about-page .ab-tagline {
+      margin-top: 27px;
+      color: #afbedb;
+      font-size: 12px;
+      letter-spacing: .7px;
+    }
+
+    /* SCROLL REVEAL */
+
+    .about-page .ab-reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .about-page .ab-reveal.ab-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes abRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes abFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    /* TABLET */
+
+    @media (max-width: 950px) {
+      .about-page .ab-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .about-page .ab-visual {
+        min-height: 430px;
+      }
+
+      .about-page .ab-about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-page .ab-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-page .ab-audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-page .ab-commitment-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+      .about-page .ab-wrap {
+        width: calc(100% - 34px);
+      }
+
+      .about-page .ab-section {
+        padding: 72px 0;
+      }
+
+      .about-page .ab-hero {
+        padding: 75px 0 45px;
+      }
+
+      .about-page .ab-hero h1 {
+        font-size: clamp(43px, 12vw, 62px);
+        letter-spacing: -2.8px;
+      }
+
+      .about-page .ab-hero-copy {
+        font-size: 14px;
+      }
+
+      .about-page .ab-visual {
+        min-height: 340px;
+      }
+
+      .about-page .ab-core {
+        width: 155px;
+        height: 155px;
+      }
+
+      .about-page .ab-core span {
+        font-size: 44px;
+      }
+
+      .about-page .ab-orbit-1 {
+        width: 220px;
+        height: 220px;
+      }
+
+      .about-page .ab-orbit-2 {
+        width: 290px;
+        height: 290px;
+      }
+
+      .about-page .ab-orbit-3 {
+        width: 335px;
+        height: 335px;
+      }
+
+      .about-page .ab-float {
+        padding: 9px 10px;
+      }
+
+      .about-page .ab-float strong {
+        font-size: 10px;
+      }
+
+      .about-page .ab-float small {
+        font-size: 9px;
+      }
+
+      .about-page .ab-float-one {
+        top: 15px;
+        right: 0;
+      }
+
+      .about-page .ab-float-two {
+        bottom: 35px;
+        left: 0;
+      }
+
+      .about-page .ab-float-three {
+        right: 0;
+        bottom: 0;
+      }
+
+      .about-page .ab-value {
+        padding: 20px 5px;
+      }
+
+      .about-page .ab-value strong {
+        font-size: 13px;
+      }
+
+      .about-page .ab-value span {
+        font-size: 10px;
+      }
+
+      .about-page .ab-heading {
+        font-size: 35px;
+      }
+
+      .about-page .ab-features-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .about-page .ab-feature {
+        min-height: 200px;
+      }
+
+      .about-page .ab-audience-grid {
+        gap: 10px;
+      }
+
+      .about-page .ab-audience {
+        min-height: 130px;
+        padding: 15px;
+      }
+
+      .about-page .ab-audience h3 {
+        font-size: 12px;
+      }
+
+      .about-page .ab-commitment-visual {
+        min-height: 310px;
+      }
+
+      .about-page .ab-cta-section {
+        padding-top: 25px;
+        padding-bottom: 72px;
+      }
+
+      .about-page .ab-cta-card {
+        padding: 45px 19px;
+        border-radius: 22px;
+      }
+
+      .about-page .ab-actions {
+        gap: 10px;
+      }
+
+      .about-page .ab-btn {
+        padding: 11px 15px;
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .about-page *,
+      .about-page *::before,
+      .about-page *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .about-page .ab-reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     ORIGINAL NAVBAR
+     Original classes, links and dropdown IDs preserved.
+====================================================== -->
+
+<header class="site-header">
+  <div class="wrap header-bar">
+
+    <a class="brand" href="index.html" aria-label="AI Builder home">
+      <img src="logo.png" alt="AI Builder" width="114" height="38">
+      <!-- <span class="brand-location">Madhya Pradesh</span> -->
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Menu"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+
+        <!-- SOLUTION -->
+        <li class="nav-item" data-panel>
+          <button
+            class="nav-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="p-solution"
+          >
+            Solution
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="panel" id="p-solution">
+            <div class="panel-inner">
+
+              <div class="panel-lead">
+                <h3>Solution</h3>
+                <p>AI roles and services you can deploy into your business.</p>
+                <a class="arrow-link" href="solution.html">
+                  View all
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="panel-cols" style="--cols:2">
+                <div class="panel-col">
+                  <h4>Roles</h4>
+                  <a href="solution-deployed-developer.html">Deployed Developer</a>
+                  <a href="solution-deployed-architect.html">Deployed Architect</a>
+                  <a href="solution-deploy-ml-ai-engineer.html">Deploy ML/AI Engineer</a>
+                  <a href="solution-deployed-robotic-engineer.html">Deployed Robotic Engineer</a>
+                  <a href="solution-data-engineer.html">Data Engineer</a>
+                  <a href="solution-product-and-analyst.html">Product and Analyst</a>
+                </div>
+
+                <div class="panel-col">
+                  <h4>Business</h4>
+                  <a href="solution-integrate-ai-for-business-operation.html">Integrate AI For Business Operation</a>
+                  <a href="solution-corporate-building.html">Corporate Building</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <!-- AI WORKSHOP -->
+        <li class="nav-item" data-panel>
+          <button
+            class="nav-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="p-workshop"
+          >
+            AI Workshop
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="panel" id="p-workshop">
+            <div class="panel-inner">
+
+              <div class="panel-lead">
+                <h3>AI Workshop</h3>
+                <p>AI programs for schools, colleges, companies and governments.</p>
+                <a class="arrow-link" href="workshop.html">
+                  View all
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="panel-cols" style="--cols:3">
+                <div class="panel-col">
+                  <h4>Education and community</h4>
+                  <a href="workshop-school-ai-program.html">School AI Program</a>
+                  <a href="workshop-college-university-ai-program.html">College &amp; University AI Program</a>
+                  <a href="workshop-rural-and-urban-ai-program.html">Rural and Urban AI Program</a>
+                </div>
+
+                <div class="panel-col">
+                  <h4>Organisations</h4>
+                  <a href="workshop-corporate-ai-program.html">Corporate AI Program</a>
+                  <a href="workshop-government-public-sector-ai-program.html">Government &amp; Public Sector AI Program</a>
+                </div>
+
+                <div class="panel-col">
+                  <h4>Delivery</h4>
+                  <a href="workshop-ai-ml-and-robotic-trainer-deployment.html">AI/ML and Robotic Trainer Deployment</a>
+                  <a href="workshop-ai-lab-innovation.html">AI Lab Innovation</a>
+                  <a href="workshop-assessment-and-certification.html">Assessment and Certification</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <!-- CYBER SECURITY -->
+        <li class="nav-item" data-panel>
+          <button
+            class="nav-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="p-cyber"
+          >
+            Cyber Security
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="panel" id="p-cyber">
+            <div class="panel-inner">
+
+              <div class="panel-lead">
+                <h3>Cyber Security</h3>
+                <p>Awareness, prevention and response, from threats to getting help.</p>
+                <a class="arrow-link" href="cyber-security.html">
+                  View all
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                  </svg>
+                </a>
+              </div>
+
+              <div class="panel-cols" style="--cols:4">
+                <div class="panel-col">
+                  <h4>Threats</h4>
+                  <a href="cyber-threats.html">Cyber Threats</a>
+                  <a href="cyber-know-the-threats.html">Know the Threats</a>
+                  <a href="recognize-a-threat.html">Recognize a Threat</a>
+                </div>
+
+                <div class="panel-col">
+                  <h4>Stay safe</h4>
+                  <a href="cyber-stay-safe-online.html">Stay Safe Online</a>
+                  <a href="cyber-protect-your-family.html">Protect Your Family</a>
+                  <a href="cyber-protect-your-business.html">Protect Your Business</a>
+                </div>
+
+                <div class="panel-col">
+                  <h4>Respond</h4>
+                  <a href="cyber-report-a-cyber-threat.html">Report a Cyber Threat</a>
+                  <a href="what-to-do-if-targeted.html">What To Do If You’re Targeted</a>
+                  <a href="cyber-report-get-help.html">Report &amp; Get Help</a>
+                </div>
+
+                <div class="panel-col">
+                  <h4>Learn</h4>
+                  <a href="cyber-awareness-resources.html">Awareness &amp; Resources</a>
+                  <a href="resource.html">Resources</a>
+                  <a href="compliance.html">Security and SOC2 Governance</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li><a class="nav-link" href="career.html">Career</a></li>
+        <li><a class="nav-link" href="resource.html">Resource</a></li>
+
+      </ul>
+
+      <a class="btn btn-primary nav-cta" href="submit-request.html">
+        Submit Request
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- =====================================================
+     ABOUT US PAGE CONTENT
+====================================================== -->
+
+<main class="about-page">
+
+  <!-- HERO -->
+  <section class="ab-hero">
+    <div class="ab-wrap ab-hero-grid">
+
+      <div class="ab-reveal">
+        <span class="ab-eyebrow">About AI Builder</span>
+
+        <h1>
+          Intelligence.<br>
+          Innovation.<br>
+          <span class="ab-gradient">Impact.</span>
+        </h1>
+
+        <p class="ab-hero-copy">
+          Empowering People. Transforming Businesses. Building the Future
+          with AI. We bring together artificial intelligence, cybersecurity,
+          technology education, and digital innovation to turn possibilities
+          into meaningful outcomes.
+        </p>
+
+        <div class="ab-actions">
+          <a class="ab-btn ab-btn-primary" href="#ab-about">
+            Discover Our Story <span>↘</span>
+          </a>
+
+          <a class="ab-btn" href="#ab-why-us">
+            Why AI Builder?
+          </a>
+        </div>
+
+        <div class="ab-hero-note">
+          <span class="ab-dot"></span>
+          Learn the Future. Build with Intelligence.
+        </div>
+      </div>
+
+      <div class="ab-visual" aria-label="Artificial intelligence illustration">
+
+        <div class="ab-orbit ab-orbit-3"></div>
+        <div class="ab-orbit ab-orbit-2"></div>
+        <div class="ab-orbit ab-orbit-1"></div>
+
+        <div class="ab-core">
+          <span>AI</span>
+        </div>
+
+        <div class="ab-float ab-float-one">
+          <strong><span class="ab-float-icon">✳</span>Artificial Intelligence</strong>
+          <small>Explore what's possible</small>
+        </div>
+
+        <div class="ab-float ab-float-two">
+          <strong><span class="ab-float-icon">⌘</span>Cybersecurity</strong>
+          <small>Build with confidence</small>
+        </div>
+
+        <div class="ab-float ab-float-three">
+          <strong><span class="ab-float-icon">↗</span>Digital Innovation</strong>
+          <small>Ideas into impact</small>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VALUES STRIP -->
+  <section class="ab-value-strip">
+    <div class="ab-wrap ab-value-grid">
+
+      <div class="ab-value">
+        <strong>Learn</strong>
+        <span>Develop future-ready skills</span>
+      </div>
+
+      <div class="ab-value">
+        <strong>Secure</strong>
+        <span>Promote responsible technology</span>
+      </div>
+
+      <div class="ab-value">
+        <strong>Build &amp; Innovate</strong>
+        <span>Create meaningful solutions</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT US -->
+  <section class="ab-section" id="ab-about">
+    <div class="ab-wrap ab-about-grid">
+
+      <div class="ab-about-intro ab-reveal">
+        <span class="ab-eyebrow">Our Story</span>
+
+        <h2>
+          Technology with<br>
+          <span class="ab-gradient">a purpose.</span>
+        </h2>
+
+        <p>
+          Making emerging technologies more accessible through learning,
+          practical expertise, and innovation-focused initiatives.
+        </p>
+
+        <a href="#ab-community" class="ab-btn">
+          Meet Our Community ↗
+        </a>
+      </div>
+
+      <div class="ab-about-copy ab-reveal">
+
+        <p>
+          Welcome to <strong>AI Builder</strong>, a technology and innovation
+          brand dedicated to advancing Artificial Intelligence,
+          cybersecurity, technology education, and digital transformation.
+        </p>
+
+        <p>
+          Operating under the legal name <strong>HYI.AI</strong>,
+          AI Builder brings together learning, innovation, and practical
+          technology solutions to help individuals, educational
+          institutions, startups, and businesses thrive in a rapidly
+          evolving digital world.
+        </p>
+
+        <p>
+          We believe the future belongs to those who can learn, adapt,
+          innovate, and apply technology to solve real-world challenges.
+          Our goal is to make emerging technologies more accessible through
+          practical training, technical expertise, AI-driven solutions,
+          and innovation-focused initiatives.
+        </p>
+
+        <p>
+          From introducing students to Artificial Intelligence to helping
+          organizations explore AI adoption, from promoting cybersecurity
+          awareness to supporting modern software development and
+          deployment, we aim to turn technological possibilities into
+          meaningful outcomes.
+        </p>
+
+        <div class="ab-mission">
+          <h3>Our Mission</h3>
+          <p>
+            Empower people with knowledge, encourage responsible innovation,
+            and connect technology education with practical implementation
+            to create opportunities for individuals and organizations.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="ab-section ab-features-section" id="ab-why-us">
+    <div class="ab-wrap">
+
+      <div class="ab-center ab-reveal">
+        <span class="ab-eyebrow">Why AI Builder</span>
+
+        <h2 class="ab-heading">
+          Built for the <span class="ab-gradient">future.</span>
+        </h2>
+
+        <p class="ab-description">
+          We connect knowledge, technology, and implementation to help
+          people develop skills and explore new opportunities.
+        </p>
+      </div>
+
+      <div class="ab-features-grid">
+
+        <article class="ab-feature ab-reveal">
+          <span class="ab-feature-number">01</span>
+          <div class="ab-feature-icon">✳</div>
+          <h3>Future-Ready Skills</h3>
+          <p>
+            Learn about emerging technologies and develop relevant technical
+            capabilities for a rapidly changing digital world.
+          </p>
+        </article>
+
+        <article class="ab-feature ab-reveal">
+          <span class="ab-feature-number">02</span>
+          <div class="ab-feature-icon">⌘</div>
+          <h3>Practical Learning</h3>
+          <p>
+            Apply knowledge through projects, workshops, experimentation,
+            and real-world use cases.
+          </p>
+        </article>
+
+        <article class="ab-feature ab-reveal">
+          <span class="ab-feature-number">03</span>
+          <div class="ab-feature-icon">↗</div>
+          <h3>Innovation-Driven Thinking</h3>
+          <p>
+            Explore new ideas, experiment with technologies, and develop
+            creative approaches to real challenges.
+          </p>
+        </article>
+
+        <article class="ab-feature ab-reveal">
+          <span class="ab-feature-number">04</span>
+          <div class="ab-feature-icon">◇</div>
+          <h3>Security-Conscious Development</h3>
+          <p>
+            Promote digital safety, responsible technology use, and secure
+            development practices.
+          </p>
+        </article>
+
+        <article class="ab-feature ab-reveal">
+          <span class="ab-feature-number">05</span>
+          <div class="ab-feature-icon">⌘</div>
+          <h3>Learning Meets Implementation</h3>
+          <p>
+            Connect technology education with development, deployment,
+            and practical applications.
+          </p>
+        </article>
+
+        <article class="ab-feature ab-reveal">
+          <span class="ab-feature-number">06</span>
+          <div class="ab-feature-icon">∞</div>
+          <h3>Continuous Improvement</h3>
+          <p>
+            Embrace curiosity, adaptability, and lifelong learning in an
+            ever-changing technological landscape.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHO WE SERVE -->
+  <section class="ab-section" id="ab-community">
+    <div class="ab-wrap">
+
+      <div class="ab-center ab-reveal">
+        <span class="ab-eyebrow">Our Community</span>
+
+        <h2 class="ab-heading">
+          Technology is for <span class="ab-gradient">everyone.</span>
+        </h2>
+
+        <p class="ab-description">
+          AI Builder aims to support a broad technology community,
+          from those taking their first steps to organizations exploring
+          digital transformation.
+        </p>
+      </div>
+
+      <div class="ab-audience-grid">
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">⌘</span>
+          <h3>Students &amp; Aspiring Professionals</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">▤</span>
+          <h3>Schools, Colleges &amp; Universities</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">&lt;/&gt;</span>
+          <h3>Developers &amp; AI Enthusiasts</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">◎</span>
+          <h3>Educators &amp; Technical Trainers</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">↗</span>
+          <h3>Startups &amp; Entrepreneurs</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">▦</span>
+          <h3>Businesses &amp; Corporate Teams</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">✳</span>
+          <h3>AI &amp; Digital Transformation Teams</h3>
+        </article>
+
+        <article class="ab-audience ab-reveal">
+          <span class="ab-audience-icon">∞</span>
+          <h3>Lifelong Learners &amp; Innovators</h3>
+        </article>
+
+      </div>
+
+      <p class="ab-audience-note ab-reveal">
+        Whether you're beginning your AI journey, expanding your technical
+        skills, exploring cybersecurity, or developing innovative
+        applications, AI Builder aims to help you take the next step.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- OUR COMMITMENT -->
+  <section class="ab-section ab-features-section" id="ab-commitment">
+    <div class="ab-wrap ab-commitment-grid">
+
+      <div class="ab-commitment-copy ab-reveal">
+        <span class="ab-eyebrow">Our Commitment</span>
+
+        <h2>
+          Innovation that<br>
+          <span class="ab-gradient">moves us forward.</span>
+        </h2>
+
+        <p>
+          At AI Builder, we believe technology should create opportunities,
+          solve problems, and empower people.
+        </p>
+
+        <p>
+          Through our training programs, services, and innovation
+          initiatives, we aim to help build a community ready for the
+          challenges and opportunities of tomorrow.
+        </p>
+
+        <ul class="ab-check-list">
+          <li>
+            <span class="ab-check">✓</span>
+            Practical and accessible technology learning
+          </li>
+          <li>
+            <span class="ab-check">✓</span>
+            Responsible and thoughtful innovation
+          </li>
+          <li>
+            <span class="ab-check">✓</span>
+            Digital safety and cybersecurity awareness
+          </li>
+          <li>
+            <span class="ab-check">✓</span>
+            Effective application of emerging technologies
+          </li>
+        </ul>
+      </div>
+
+      <div class="ab-commitment-visual ab-reveal">
+        <div class="ab-commitment-symbol" aria-hidden="true">✳</div>
+        <h3>Build a better digital future.</h3>
+        <p>
+          Learn continuously. Innovate responsibly. Turn ideas into action.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+  <section class="ab-section ab-cta-section" id="ab-contact">
+    <div class="ab-wrap">
+
+      <div class="ab-cta-card ab-center ab-reveal">
+        <span class="ab-eyebrow">The Future Starts Here</span>
+
+        <h2>
+          Let's build the future
+          <span class="ab-gradient">together.</span>
+        </h2>
+
+        <p>
+          Artificial Intelligence, cybersecurity, robotics, and digital
+          innovation are opening new possibilities across every industry.
+          At AI Builder, we invite you to learn, explore, create, and innovate.
+        </p>
+
+        <div class="ab-actions">
+          <a href="submit-request.html" class="ab-btn ab-btn-primary">
+            Connect With Us ↗
+          </a>
+
+          <a href="#ab-about" class="ab-btn">
+            Back to Our Story ↑
+          </a>
+        </div>
+
+        <div class="ab-tagline">
+          Learn the Future. Build with Intelligence. Innovate with Purpose.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<!-- =====================================================
+     ORIGINAL FOOTER
+     Original classes, links and social SVGs preserved.
+====================================================== -->
+
+<footer class="site-footer">
+  <div class="wrap">
+
+    <div class="foot-grid">
+
+      <!-- BRAND AND SOCIAL LINKS -->
+      <div class="foot-brand">
+        <a href="index.html" aria-label="AI Builder home">
+          <img src="logo.png" alt="AI Builder" width="138" height="46">
+        </a>
+
+        <p>
+          AI solutions, workshops and cyber awareness for businesses,
+          institutions and communities.
+        </p>
+
+        <div class="foot-col">
+          <h4>Follow us</h4>
+        </div>
+
+        <div class="social">
+
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="3"/>
+              <path d="M8 11v6M8 7.6v.01M12 17v-6M12 13c0-1.6 1-2 2.2-2 1.5 0 2 1 2 2.5V17"/>
+            </svg>
+          </a>
+
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.5 4.5l15 15M19.5 4.5l-15 15"/>
+            </svg>
+          </a>
+
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 21v-8h3l.5-3.5H14V7.5c0-1 .5-1.7 1.8-1.7h1.8V2.8c-.5-.1-1.5-.2-2.6-.2-2.6 0-4.3 1.6-4.3 4.4V9.5H8V13h2.7v8z"/>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r=".6"/>
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="4"/>
+              <path d="M10 9.5v5l4.5-2.5z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- SOLUTIONS -->
+      <div class="foot-col">
+        <h4>Solution</h4>
+        <ul>
+          <li><a href="solution-deployed-developer.html">Deployed Developer</a></li>
+          <li><a href="solution-deployed-architect.html">Deployed Architect</a></li>
+          <li><a href="solution-deploy-ml-ai-engineer.html">Deploy ML/AI Engineer</a></li>
+          <li><a href="solution-deployed-robotic-engineer.html">Deployed Robotic Engineer</a></li>
+          <li><a href="solution-data-engineer.html">Data Engineer</a></li>
+          <li><a href="solution-product-and-analyst.html">Product and Analyst</a></li>
+          <li><a href="solution.html">All solutions</a></li>
+        </ul>
+      </div>
+
+
+      <!-- AI WORKSHOPS -->
+      <div class="foot-col">
+        <h4>AI Workshop</h4>
+        <ul>
+          <li><a href="workshop-corporate-ai-program.html">Corporate AI Program</a></li>
+          <li><a href="workshop-college-university-ai-program.html">College &amp; University AI Program</a></li>
+          <li><a href="workshop-school-ai-program.html">School AI Program</a></li>
+          <li><a href="workshop-rural-and-urban-ai-program.html">Rural and Urban AI Program</a></li>
+          <li><a href="workshop-government-public-sector-ai-program.html">Government &amp; Public Sector AI Program</a></li>
+          <li><a href="workshop.html">All programs</a></li>
+        </ul>
+      </div>
+
+
+      <!-- CYBER SECURITY -->
+      <div class="foot-col">
+        <h4>Cyber Security</h4>
+        <ul>
+          <li><a href="cyber-stay-safe-online.html">Stay Safe Online</a></li>
+          <li><a href="cyber-know-the-threats.html">Know the Threats</a></li>
+          <li><a href="cyber-protect-your-family.html">Protect Your Family</a></li>
+          <li><a href="cyber-protect-your-business.html">Protect Your Business</a></li>
+          <li><a href="cyber-report-get-help.html">Report &amp; Get Help</a></li>
+          <li><a href="cyber-awareness-resources.html">Awareness &amp; Resources</a></li>
+        </ul>
+      </div>
+
+
+      <!-- COMPANY, RESOURCES AND COMPLIANCE -->
+      <div class="ab-footer-extra">
+
+        <div class="foot-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="submit-request.html">Submit Request</a></li>
+            <li><a href="cyber-security.html">Cyber Security hub</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="submit-request.html">Submit Request</a></li>
+            <li><a href="cyber-security.html">Cyber Security hub</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col ab-footer-compliance">
+          <h4>Compliance</h4>
+          <ul>
+            <li><a href="compliance.html#soc2">Security and SOC2 Governance</a></li>
+            <li><a href="compliance.html#privacy">Data Protection &amp; Privacy</a></li>
+            <li><a href="compliance.html#accessibility">Accessibility</a></li>
+            <li><a href="compliance.html#responsible-ai">Responsible AI</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="foot-bottom">
+      <span>© <span id="ab-footer-year">2026</span> AI Builder. All rights reserved.</span>
+
+      <nav aria-label="Compliance">
+        <a href="compliance.html#soc2">SOC 2 Governance</a>
+        <a href="compliance.html#privacy">Privacy</a>
+        <a href="compliance.html#accessibility">Accessibility</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- Keep your original site JavaScript -->
+<script src="site.js"></script>
+
+<!-- About page interactions -->
+<script>
+  // Footer year
+  const footerYear = document.getElementById("ab-footer-year");
+
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
+  // Scroll reveal animation
+  (function () {
+    const page = document.querySelector(".about-page");
+
+    if (!page) return;
+
+    const elements = page.querySelectorAll(".ab-reveal");
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach(function (element) {
+        element.classList.add("ab-visible");
+      });
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ab-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -25px 0px"
+      }
+    );
+
+    elements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+  })();
+</script>
+
+</body>
+</html>
