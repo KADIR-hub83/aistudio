@@ -61,7 +61,7 @@ ul{margin:0;padding:0;list-style:none}
 .brand img{height:44px;width:auto}
 
 
-.brand {
+/* .brand {
   position: relative;
   display: inline-flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ ul{margin:0;padding:0;list-style:none}
   );
   box-shadow: 0 0 6px rgba(80, 180, 255, 0.45);
   transform: rotate(-1deg);
-}
+} */
 
 
 .brand {
