@@ -163,6 +163,98 @@ if (toggle && nav) {
   });
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slides .slide");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const timers = new WeakMap();
+
+  function stopTyping(heading) {
+    const timer = timers.get(heading);
+
+    if (timer) {
+      clearTimeout(timer);
+      timers.delete(heading);
+    }
+  }
+
+  function typeHeading(heading) {
+    stopTyping(heading);
+
+    const fullText = heading.dataset.fullText ||
+      heading.textContent.trim();
+
+    heading.dataset.fullText = fullText;
+
+    if (prefersReducedMotion) {
+      heading.textContent = fullText;
+      heading.classList.remove("typing");
+      return;
+    }
+
+    heading.textContent = "";
+    heading.classList.add("typing");
+
+    let index = 0;
+
+    function typeNext() {
+      heading.textContent = fullText.slice(0, index);
+      index++;
+
+      if (index <= fullText.length) {
+        timers.set(
+          heading,
+          setTimeout(typeNext, 42)
+        );
+      } else {
+        timers.set(
+          heading,
+          setTimeout(() => {
+            heading.classList.remove("typing");
+          }, 6000)
+        );
+      }
+    }
+
+    typeNext();
+  }
+
+  function animateActiveSlide() {
+    slides.forEach(slide => {
+      const heading = slide.querySelector(".slide-copy h1");
+      if (!heading) return;
+
+      if (slide.classList.contains("is-active")) {
+        typeHeading(heading);
+      } else {
+        stopTyping(heading);
+        heading.classList.remove("typing");
+        heading.textContent =
+          heading.dataset.fullText || heading.textContent;
+      }
+    });
+  }
+
+  // Initial active slide
+  animateActiveSlide();
+
+  // Detect changes made by your existing slider
+  const observer = new MutationObserver(() => {
+    animateActiveSlide();
+  });
+
+  slides.forEach(slide => {
+    observer.observe(slide, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+});
+
+
 /* ---------- Hero slider ---------- */
 
   /* ---------- Hero slider ---------- */

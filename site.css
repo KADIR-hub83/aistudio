@@ -57,7 +57,7 @@ ul{margin:0;padding:0;list-style:none}
 
 /* Header */
 .site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(5, 11, 39, 0);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.header-bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px; padding-top:10px; padding-bottom:10px; }
+.header-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:60px; padding-top:10px; padding-bottom:10px; }
 .brand img{height:44px;width:auto}
 
 
@@ -135,10 +135,10 @@ ul{margin:0;padding:0;list-style:none}
 
 
 
-.site-nav{display:flex;align-items:center;gap:6px}
-.nav-list{display:flex;align-items:center;gap:2px}
+.site-nav{display:flex;align-items:center;gap:0px}
+.nav-list{display:flex;align-items:center;gap:0px}
 
-.nav-btn,.nav-link{display:inline-flex;align-items:center;gap:6px;background:none;border:0;color:var(--text);font:600 .85rem var(--font-body);padding:10px 14px;border-radius:10px;cursor:pointer}
+.nav-btn,.nav-link{display:inline-flex;align-items:center;gap:0px;background:none;border:0;color:var(--text);font:600 .85rem var(--font-body);padding:8px 8px;border-radius:10px;cursor:pointer}
 .nav-btn:hover,.nav-link:hover,.nav-item.open>.nav-btn{background:rgba(255,255,255,.07)}
 .nav-btn svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2.4;transition:transform .2s}
 .nav-item.open>.nav-btn svg{transform:rotate(180deg)}
@@ -171,14 +171,41 @@ ul{margin:0;padding:0;list-style:none}
 
 
 .slide-copy h1 {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(2.4rem, 5.4vw, 4.5rem);
+  /* font-family: 'Manrope', sans-serif; */
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.045em;
   color: #f5f7ff;
+    display: block;
+  width: fit-content;
+  max-width: 100%;
+  position: relative;
 }
 
+/* Animated typing cursor */
+.slide-copy h1.typing::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  background: #00c8ff;
+  margin-left: 5px;
+  vertical-align: -0.05em;
+  animation: typingCursor 0.7s steps(1) infinite;
+}
+
+@keyframes typingCursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-copy h1.typing::after {
+    animation: none;
+  }
+}
 
 
 
