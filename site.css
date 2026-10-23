@@ -135,7 +135,7 @@ ul{margin:0;padding:0;list-style:none}
 
 
 
-.site-nav{display:flex;align-items:center;gap:0px}
+.site-nav{display:flex;align-items:center;gap:30px}
 .nav-list{display:flex;align-items:center;gap:0px}
 
 .nav-btn,.nav-link{display:inline-flex;align-items:center;gap:0px;background:none;border:0;color:var(--text);font:600 .85rem var(--font-body);padding:8px 8px;border-radius:10px;cursor:pointer}
